@@ -1,0 +1,5 @@
+[MASTER]
+
+ignore=env, LICENSE
+
+ignore-patterns=\..*, .*.in, .*.json, .*.md, .*.txt
