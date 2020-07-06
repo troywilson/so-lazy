@@ -38,6 +38,7 @@ deploy:
 - provider: script
   script: tox -e coveralls
   on:
+    tags: true
     condition: "$TOXENV = py37"
 - provider: pypi
   username: __token__

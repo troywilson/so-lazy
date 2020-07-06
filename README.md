@@ -1,6 +1,6 @@
 # So Lazy
 
-[![Build Status](https://travis-ci.org/troywilson/so-lazy.svg?branch=master)](https://travis-ci.org/troywilson/so-lazy) [![Coverage Status](https://coveralls.io/repos/github/troywilson/so-lazy/badge.svg?branch=master)](https://coveralls.io/github/troywilson/so-lazy?branch=master) ![PyPI](https://img.shields.io/pypi/v/so-lazy) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/so-lazy) [![Apache V2 License](https://img.shields.io/badge/license-Apache%20V2-blue.svg)](https://github.com/troywilson/so-lazy/blob/master/LICENSE)
+[![Build Status](https://travis-ci.org/troywilson/so-lazy.svg?branch=master)](https://travis-ci.org/troywilson/so-lazy) [![Coverage Status](https://coveralls.io/repos/github/troywilson/so-lazy/badge.svg?branch=master)](https://coveralls.io/github/troywilson/so-lazy?branch=master) [![PyPI](https://img.shields.io/pypi/v/so-lazy)](https://pypi.org/project/so-lazy/) [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/so-lazy)](https://pypi.org/project/so-lazy/) [![Apache V2 License](https://img.shields.io/badge/license-Apache%20V2-blue.svg)](https://github.com/troywilson/so-lazy/blob/master/LICENSE)
 
 Lazy loading Python package.
 
