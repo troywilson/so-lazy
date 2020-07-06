@@ -2,22 +2,24 @@ os: linux
 dist: xenial
 language: python
 python:
-  - '3.4'
-  - '3.5'
-  - '3.6'
-  - '3.7'
-  - '3.8'
+- '3.4'
+- '3.5'
+- '3.6'
+- '3.7'
+- '3.8'
 
 install:
-  - pip install pylint
+- pip install pylint
 
 script:
-  - ./tests/test.py
-  - ./pylint --fail-under=9 *
+- "./tests/test.py"
+- "pylint --fail-under=9 *"
 
 deploy:
   provider: pypi
-  username: "__token__"
+  username: __token__
+  password:
+    secure: hd27eSDQicmiFBbM2xyiyAKr6M4dTMpjzQZpdLzBLCnWjgfYlB6RmJiDAbNGkY5BphT6ygM74EmEbsLaR40dUrXh6imstzD3YrIQQ4zABzRQt5EhWwEIRBMQWf74jcvWvAIhIin2ZZkLYJ2R12EDqyUcUPSMdklk3roCgFa00AtIHkT0IcnETLDkdFGPZA9pXLZZSkVULg6SzXPLfcxf3Z2EqL0y8FZu+dayvaUpJEd44LmFnqNKb04Cp0ncJ5oBMwZbarq+k9JBRobNvtm2S94B54SfFjhxZGVcTgnHeX9GjiOnr+B7u0h3roW5P2R5jFMWlT8yw2WvZM4aLMJcYsFZkrLO6BqGNsxy6VUxHiw5nmSren/n2JM2o030cAnZ767c9KyqtS6UoCSdtVpW7Ru7qPCrb8b/37G9fA+JWgg5SwqSkLXp458s93uHzV5KLia0HSPdcV36ty5m4eXhRwKkoC1KPGjoAFSotfZtDjhhrQUUCJe89v+UWUm2nLBVi0DDU6nC3FYY3hWZC1E8dSw0OeagV/z6fhWNyk9s1oez6RRq0MnPi8qPG4C4sT3Y0+LGRlI+L8JeI7F6g+kgGsanB9x9CdOFe6tXP7RpHV0vcphQXMs9MAPazly6f8+LtunQSDO4FPuco7caF2+1sF8q/leHLrk8RK8OtKysoMk=
   skip_existing: true
   on:
     tags: true
@@ -25,6 +27,6 @@ deploy:
 notifications:
   email: false
   slack:
-    secure: "Erp9n4toG/3279E/cH/vxE5Me3rtNc3ZD8ihZ7VPntNNcq2dClJmMKdtiSSmgB+Nd4+JXAAVI8o0YQokjDU1SZrrr9KAfHU7b99EVXv/xs+OHyAU2odz8GReRZ4trRBhpztFhnXhKDYNaH6j0feEVtVXO6qeonj2Q/IClR2rOygMAR3y/iHfc6fjZDAl8wri9DQ95lTj4pnNO7j9Nwv/Yaudnfpa2AUeXAKmgIoLe1vm3oyvOiu5ndNcZTmt2iNKnBbxQ2es/7W6wzBmSleeq2cadg4HIbeu6EhxcRMc7aLAiUGZeRoI39+aGuA8rgCij6tGk+rYnG/DmLn4DvvMdaRXnN92H96BHlYgZcov8h+qI7j3SXkpYpP4wuMHM3Paw+yUj7P9t4mk5vaEzBUd/GxQoH0Q9t9/1Bm8Og2uHmVt1IYiz0J1NgtRp69aqSdEOLETP1e9RyL9U93jP3xMYxgrGWP/9EDeHNpwh7SElgC7ptR5pDQYL+KVumdpZ6y2MwhL21zWT7+cv6ukSuq/+JC7zXFQ5wrbvVAubHDkK7SmWPNX/eHDi+xcV8BvEEGA4WMYNsz1gxUsn4Cs/gwXJPi+WqKplYrMd6RXJArDSBgjD0GehWvFzo8GGxzaoOnF8EZmtBjLPvHw1xF/BNmoRNExKTGbbGUKMjYRbGF75ZQ="
+    secure: Erp9n4toG/3279E/cH/vxE5Me3rtNc3ZD8ihZ7VPntNNcq2dClJmMKdtiSSmgB+Nd4+JXAAVI8o0YQokjDU1SZrrr9KAfHU7b99EVXv/xs+OHyAU2odz8GReRZ4trRBhpztFhnXhKDYNaH6j0feEVtVXO6qeonj2Q/IClR2rOygMAR3y/iHfc6fjZDAl8wri9DQ95lTj4pnNO7j9Nwv/Yaudnfpa2AUeXAKmgIoLe1vm3oyvOiu5ndNcZTmt2iNKnBbxQ2es/7W6wzBmSleeq2cadg4HIbeu6EhxcRMc7aLAiUGZeRoI39+aGuA8rgCij6tGk+rYnG/DmLn4DvvMdaRXnN92H96BHlYgZcov8h+qI7j3SXkpYpP4wuMHM3Paw+yUj7P9t4mk5vaEzBUd/GxQoH0Q9t9/1Bm8Og2uHmVt1IYiz0J1NgtRp69aqSdEOLETP1e9RyL9U93jP3xMYxgrGWP/9EDeHNpwh7SElgC7ptR5pDQYL+KVumdpZ6y2MwhL21zWT7+cv6ukSuq/+JC7zXFQ5wrbvVAubHDkK7SmWPNX/eHDi+xcV8BvEEGA4WMYNsz1gxUsn4Cs/gwXJPi+WqKplYrMd6RXJArDSBgjD0GehWvFzo8GGxzaoOnF8EZmtBjLPvHw1xF/BNmoRNExKTGbbGUKMjYRbGF75ZQ=
   on:
     tags: true
