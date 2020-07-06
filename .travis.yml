@@ -34,15 +34,15 @@ install:
 script:
 - tox -e $TOXENV
 
-after_success:
-- tox -e coveralls
-
 deploy:
-  provider: pypi
+- provider: script
+  script: tox -e coveralls
+  on:
+    condition: "$TOXENV = py37"
+- provider: pypi
   username: __token__
   password:
     secure: hd27eSDQicmiFBbM2xyiyAKr6M4dTMpjzQZpdLzBLCnWjgfYlB6RmJiDAbNGkY5BphT6ygM74EmEbsLaR40dUrXh6imstzD3YrIQQ4zABzRQt5EhWwEIRBMQWf74jcvWvAIhIin2ZZkLYJ2R12EDqyUcUPSMdklk3roCgFa00AtIHkT0IcnETLDkdFGPZA9pXLZZSkVULg6SzXPLfcxf3Z2EqL0y8FZu+dayvaUpJEd44LmFnqNKb04Cp0ncJ5oBMwZbarq+k9JBRobNvtm2S94B54SfFjhxZGVcTgnHeX9GjiOnr+B7u0h3roW5P2R5jFMWlT8yw2WvZM4aLMJcYsFZkrLO6BqGNsxy6VUxHiw5nmSren/n2JM2o030cAnZ767c9KyqtS6UoCSdtVpW7Ru7qPCrb8b/37G9fA+JWgg5SwqSkLXp458s93uHzV5KLia0HSPdcV36ty5m4eXhRwKkoC1KPGjoAFSotfZtDjhhrQUUCJe89v+UWUm2nLBVi0DDU6nC3FYY3hWZC1E8dSw0OeagV/z6fhWNyk9s1oez6RRq0MnPi8qPG4C4sT3Y0+LGRlI+L8JeI7F6g+kgGsanB9x9CdOFe6tXP7RpHV0vcphQXMs9MAPazly6f8+LtunQSDO4FPuco7caF2+1sF8q/leHLrk8RK8OtKysoMk=
-  skip_existing: true
   on:
     tags: true
     condition: "$TOXENV = py37"
