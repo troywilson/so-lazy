@@ -15,7 +15,7 @@ pip install so-lazy
 
 ### Function
 
-```
+```python
 from so_lazy import lazy
 
 _data = None
@@ -34,7 +34,7 @@ if data_needed:
 
 ### Class
 
-```
+```python
 from so_lazy import lazy
 
 class Example:

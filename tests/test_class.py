@@ -35,7 +35,6 @@ class ChildLazyLoadFunctionDisabled(Parent):
     '''Child class with no extensions but one disabled lazy
        load function'''
 
-    @lazy(enabled=False)
     def length2(self):
         '''Override of Parent method'''
         return len(self.data)

@@ -5,6 +5,7 @@ import unittest
 from so_lazy import lazy
 
 # pylint: disable=global-statement
+# pylint: disable=duplicate-code
 
 TEST_DATASET = [1, 2, 3]
 

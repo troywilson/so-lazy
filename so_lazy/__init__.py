@@ -30,8 +30,6 @@ def lazy(**dec_kwargs):
 
             # set defaults
             loader = None
-
-            enabled = dec_kwargs.get('enabled', True)
             loader_name = dec_kwargs.get('loader', '_lazy_loader')
 
             # check if calling class has loader
@@ -42,13 +40,11 @@ def lazy(**dec_kwargs):
             if loader is None:
                 loader = obj.__globals__.get(loader_name, None)
 
-            if enabled:
-
-                # call lazy loader
-                if loader is not None:
-                    loader()
-                else:
-                    raise NoLoaderError('%s not found in current scope' % loader_name)
+            # call lazy loader
+            if loader is not None:
+                loader()
+            else:
+                raise NoLoaderError('%s not found in current scope' % loader_name)
 
             return obj(*args, **kwargs)
 
