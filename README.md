@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/troywilson/so-lazy.svg?branch=master)](https://travis-ci.org/troywilson/so-lazy) [![Coverage Status](https://coveralls.io/repos/github/troywilson/so-lazy/badge.svg?branch=master)](https://coveralls.io/github/troywilson/so-lazy?branch=master) [![PyPI](https://img.shields.io/pypi/v/so-lazy)](https://pypi.org/project/so-lazy/) [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/so-lazy)](https://pypi.org/project/so-lazy/) [![Apache V2 License](https://img.shields.io/badge/license-Apache%20V2-blue.svg)](https://github.com/troywilson/so-lazy/blob/master/LICENSE)
 
-Lazy loading Python package.
+The so-lazy package allows expensive operations (i.e. API calls, complicated math) to be deferred until they are needed.
 
 
 ## Install
@@ -12,6 +12,8 @@ pip install so-lazy
 ```
 
 ## Usage
+
+When the lazy decorator is called it will search the namespace scope for a loader named '_lazy_loader' (this can be overridden by the keyword loader in the lazy call ie @lazy(loader='_custom_loader')) and run it before returning to the decorated function/method.
 
 ### Function
 
