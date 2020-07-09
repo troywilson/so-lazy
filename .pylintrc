@@ -2,4 +2,4 @@
 
 ignore=env, LICENSE
 
-ignore-patterns=\..*, .*.in, .*.json, .*.md, .*.txt
+ignore-patterns=\..*, .*.in$, .*.json$, .*.md$, .*.txt$
