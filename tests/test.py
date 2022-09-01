@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-'''Test runner'''
+"""Test runner"""
 
 import os.path
 import sys

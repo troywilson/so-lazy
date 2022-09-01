@@ -1,5 +1,5 @@
 
-'''so_lazy lazy loading Python package'''
+"""so_lazy lazy loading Python package"""
 
 import json
 import os
@@ -16,8 +16,9 @@ __version__ = _pkg_info['version']
 
 from functools import wraps
 
+
 def lazy(**dec_kwargs):
-    '''Lazy loader decorator'''
+    """Lazy loader decorator"""
 
     def _decorator(obj):
 
@@ -56,8 +57,10 @@ def lazy(**dec_kwargs):
 # Exceptions
 # -----------
 
+
 class ClassDecoratedError(TypeError):
-    '''Class decorator error'''
+    """Class decorator error"""
+
 
 class NoLoaderError(AttributeError):
-    '''No loader found error'''
+    """No loader found error"""
