@@ -1,5 +1,5 @@
 
-'''Tests for so_lazy default function implementation'''
+"""Tests for so_lazy default function implementation"""
 
 import unittest
 from so_lazy import lazy
@@ -36,7 +36,7 @@ def _lazy_loader():
         _DATA = TEST_DATASET
 
 class FunctionDefaultTests(unittest.TestCase):
-    '''Test function lazy load with defaults'''
+    """Test function lazy load with defaults"""
 
     def setUp(self):
         global _DATA
@@ -45,7 +45,7 @@ class FunctionDefaultTests(unittest.TestCase):
 
     @staticmethod
     def test_data_loaded_no_args():
-        '''Test basic function lazy load with no args'''
+        """Test basic function lazy load with no args"""
 
         assert len(_DATA) == 0
         assert _default_func_no_args() == len(TEST_DATASET)
@@ -53,7 +53,7 @@ class FunctionDefaultTests(unittest.TestCase):
 
     @staticmethod
     def test_data_loaded_args():
-        '''Test basic function lazy load with args'''
+        """Test basic function lazy load with args"""
 
         assert len(_DATA) == 0
         assert _default_func_args(0) == len(TEST_DATASET)
@@ -61,7 +61,7 @@ class FunctionDefaultTests(unittest.TestCase):
 
     @staticmethod
     def test_data_loaded_kwargs():
-        '''Test basic function lazy load with kwargs'''
+        """Test basic function lazy load with kwargs"""
 
         assert len(_DATA) == 0
         assert _default_func_kwargs(inc2=0) == len(TEST_DATASET)
@@ -69,7 +69,7 @@ class FunctionDefaultTests(unittest.TestCase):
 
     @staticmethod
     def test_data_loaded_args_kwargs():
-        '''Test basic function lazy load with args and kwargs'''
+        """Test basic function lazy load with args and kwargs"""
 
         assert len(_DATA) == 0
         assert _default_func_args_kwargs(0, inc2=0) == len(TEST_DATASET)
